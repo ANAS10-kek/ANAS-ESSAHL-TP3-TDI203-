@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="TP.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, scale=1.0" />
+    <meta name="google-signin-client_id" content="762745159950-n3kt4ijp3kan7n665nh0kb04qo0edn07.apps.googleusercontent.com">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2d05dd57ce.js" crossorigin="anonymous"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+<body>
+
+
+    <form runat="server" >
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
+            <a href="/Default.aspx" class="navbar-brand">
+                <img height="60" src="../pic/1x/a.png" /></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link a" href="/Default.aspx#showcase">Overview</a>
+
+                    <a class="nav-link a" href="/Default.aspx#features">Features</a>
+
+                    <a class="nav-link a" href="/Default.aspx#my-carousel">Gallery</a>
+
+
+                    <a class="nav-link a" href="/Default.aspx#team">Team</a>
+
+                    <a class="nav-link a" href="/Default.aspx#contact">Contact</a>
+                    <a class="nav-link btn btn-info px-3 text-light" href="/Account/Register">Register Now</a>
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="showcase" runat="server" />
+        <asp:ContentPlaceHolder ID="cont" runat="server" />
+        <asp:ContentPlaceHolder ID="slider" runat="server" />
+        <asp:ContentPlaceHolder ID="container_team" runat="server" />
+        <asp:ContentPlaceHolder ID="contact_container" runat="server" />
+        <asp:ContentPlaceHolder ID="showcase_register" runat="server" />
+        <asp:ContentPlaceHolder ID="register_form" runat="server" />
+        <asp:ContentPlaceHolder ID="script" runat="server" />
+        <asp:ContentPlaceHolder ID="ScriptCountdown" runat="server" />
+        <asp:ContentPlaceHolder ID="ConfiramtionPage" runat="server" />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+
+    </form>
+
+    <footer style="position: sticky" class="">
+        <div class="bg-secondary d-flex align-items-center justify-content-around py-2 px-5" style="height: max-content">
+            <div>&copy2020 <span style="color: #ff0000">TDI203 ANAS ESSAHL</span>.All right reserved</div>
+            <div class="d-flex justify-content-around">
+                <a href="#"><i class="fab fa-2x fa-facebook-f pl-4 text-light"></i></a>
+                <a href="#"><i class="fab fa-2x  fa-twitter pl-4 text-light"></i></a>
+                <a href="#"><i class="fab fa-2x fa-google pl-4 text-light"></i></a>
+                <a href="#"><i class="fab fa-2x fa-linkedin pl-4 text-light"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        function changeSize() {
+            if ($(window).width() > 600) {
+                $("#imgShowcase").show();
+            } else {
+                $("#imgShowcase").hide();
+            }
+        }
+        window.addEventListener("resize", changeSize);
+
+    </script>
+    
+</body>
+</html>
+
